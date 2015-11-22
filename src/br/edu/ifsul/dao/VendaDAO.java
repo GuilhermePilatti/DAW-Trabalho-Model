@@ -117,7 +117,7 @@ public class VendaDAO implements Serializable{
         EntityManager em = emf.createEntityManager();
         
         try{
-            return em.createQuery("from Venda order by nome").getResultList();
+            return em.createQuery("from Venda order by dataVenda").getResultList();
         } catch(Exception e){
             throw new Exception("Erro ao executar a operação de persistência:" +e.getMessage());
         } finally{
